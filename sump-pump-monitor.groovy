@@ -1,4 +1,4 @@
-/*
+/**
  *  Sump Pump Monitor
  *
  *  Copyright 2015 Rich Walchuck
