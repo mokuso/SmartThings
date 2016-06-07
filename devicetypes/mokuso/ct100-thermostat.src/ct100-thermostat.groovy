@@ -86,16 +86,16 @@ metadata {
 		}
 		//
     	standardTile("heatLevelUp", "device.heatLevelUp", inactiveLabel: false, decoration: "flat") {
-        	state "heatLevelUp", label:'  ', action:"heatLevelUp", icon:"st.thermostat.thermostat-up", backgroundColor:"#bc2323"
+        	state "heatLevelUp", label:'  ', action:"heatLevelUp", icon:"st.thermostat.thermostat-up"
     	}
     	standardTile("heatLevelDown", "device.heatLevelDown", inactiveLabel: false, decoration: "flat") {
-        	state "heatLevelDown", label:'  ', action:"heatLevelDown", icon:"st.thermostat.thermostat-down", backgroundColor:"#bc2323"
+        	state "heatLevelDown", label:'  ', action:"heatLevelDown", icon:"st.thermostat.thermostat-down"
     	}
     	standardTile("coolLevelUp", "device.coolLevelUp", inactiveLabel: false, decoration: "flat") {
-        	state "coolLevelUp", label:'  ', action:"coolLevelUp", icon:"st.thermostat.thermostat-up", backgroundColor:"#1e9cbb"
+        	state "coolLevelUp", label:'  ', action:"coolLevelUp", icon:"st.thermostat.thermostat-up"
     	}
     	standardTile("coolLevelDown", "device.coolLevelDown", inactiveLabel: false, decoration: "flat") {
-        	state "coolLevelDown", label:'  ', action:"coolLevelDown", icon:"st.thermostat.thermostat-down", backgroundColor:"#1e9cbb"
+        	state "coolLevelDown", label:'  ', action:"coolLevelDown", icon:"st.thermostat.thermostat-down"
     	}
         //
 		valueTile("heatingSetpoint", "device.heatingSetpoint", inactiveLabel: false, decoration: "flat") {
@@ -105,10 +105,10 @@ metadata {
 			state "cool", label:'${currentValue}° cool', icon: "st.thermostat.cooling", backgroundColor:"#1e9cbb"
 		}
 		valueTile("humidity", "device.humidity", inactiveLabel: false, decoration: "flat") {
-			state "humidity", label:'${currentValue}% humidity', unit:""
+			state "humidity", label:'Humidity\n${currentValue}%', unit:""
 		}
 		valueTile("battery", "device.battery", inactiveLabel: false, decoration: "flat") {
-			state "battery", label:'${currentValue}% battery', unit:""
+			state "battery", label:'Battery\n${currentValue}%', unit:""
 		}
 		standardTile("refresh", "device.thermostatMode", inactiveLabel: false, decoration: "flat") {
 			state "default", action:"refresh.refresh", icon:"st.secondary.refresh"
@@ -626,8 +626,8 @@ def coolLevelUp() {
         minTemp = 1 // Min Temp in C
     	log.trace "Location is in Celsius, MaxTemp $maxTemp, MinTemp $minTemp"
     } else {
-    	maxTemp = 99 // Max temp in F
-    	minTemp = 35 // Max temp in F
+    	maxTemp = 90 // Max temp in F
+    	minTemp = 55 // Max temp in F
     	log.trace "Location is in Farenheit, MaxTemp $maxTemp, MinTemp $minTemp"
     }
 
@@ -649,8 +649,8 @@ def coolLevelDown() {
         minTemp = 1 // Min Temp in C
     	log.trace "Location is in Celsius, MaxTemp $maxTemp, MinTemp $minTemp"
     } else {
-    	maxTemp = 99 // Max temp in F
-    	minTemp = 35 // Max temp in F
+    	maxTemp = 90 // Max temp in F
+    	minTemp = 55 // Max temp in F
     	log.trace "Location is in Farenheit, MaxTemp $maxTemp, MinTemp $minTemp"
     }
 
@@ -672,8 +672,8 @@ def heatLevelUp() {
         minTemp = 1 // Min Temp in C
     	log.trace "Location is in Celsius, MaxTemp $maxTemp, MinTemp $minTemp"
     } else {
-    	maxTemp = 99 // Max temp in F
-    	minTemp = 35 // Max temp in F
+    	maxTemp = 90 // Max temp in F
+    	minTemp = 55 // Max temp in F
     	log.trace "Location is in Farenheit, MaxTemp $maxTemp, MinTemp $minTemp"
     }
 
@@ -696,7 +696,7 @@ def heatLevelDown() {
     	log.trace "Location is in Celsius, MaxTemp $maxTemp, MinTemp $minTemp"
     } else {
     	maxTemp = 90 // Max temp in F
-    	minTemp = 45 // Max temp in F
+    	minTemp = 55 // Max temp in F
     	log.trace "Location is in Farenheit, MaxTemp $maxTemp, MinTemp $minTemp"
     }
 
