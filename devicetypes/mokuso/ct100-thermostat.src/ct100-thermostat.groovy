@@ -16,10 +16,10 @@ metadata {
 		command "switchFanMode"
 		command "quickSetCool"
 		command "quickSetHeat"
-        command "heatLevelUp"
-        command "heatLevelDown"
-        command "coolLevelUp"
-        command "coolLevelDown"
+		command "heatLevelUp"
+		command "heatLevelDown"
+		command "coolLevelUp"
+		command "coolLevelDown"
 
 		fingerprint deviceId: "0x08", inClusters: "0x43,0x40,0x44,0x31,0x80,0x85,0x60"
 	}
@@ -115,8 +115,8 @@ metadata {
 		}
 		//main "temperature"
 		//details(["temperature", "mode", "fanMode", "heatSliderControl", "heatingSetpoint", "coolSliderControl", "coolingSetpoint", "refresh", "humidity", "battery"])
-        main "temperature"
-        details(["temperature", "mode", "fanMode", "heatLevelDown", "heatingSetpoint", "heatLevelUp", "coolLevelDown", "coolingSetpoint", "coolLevelUp", "battery", "humidity", "refresh"])
+		main "temperature"
+		details(["temperature", "mode", "fanMode", "heatLevelDown", "heatingSetpoint", "heatLevelUp", "coolLevelDown", "coolingSetpoint", "coolLevelUp", "battery", "humidity", "refresh"])
 	}
 }
 
